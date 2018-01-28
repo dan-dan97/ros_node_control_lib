@@ -37,5 +37,8 @@ int main() {
         }
         boost::this_thread::sleep(boost::posix_time::milliseconds(50));
     }
+
+    ROSNodeControl::ROSmaster.kill();
+    ROSNodeControl::ROSmaster.waitKilling();
     return 0;
 }
