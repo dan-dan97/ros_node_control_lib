@@ -35,7 +35,7 @@ int main() {
             node.killChild(ROSNodeInfo(ROSNodeInfo::NodeType::NODE, "image_view", "image_view"));
             std::cout << "Process killed" << std::endl;
         }
-        boost::this_thread::sleep(boost::posix_time::milliseconds(50));
+        boost::this_thread::sleep(boost::posix_time::milliseconds(10));
     }
 
     ROSNodeControl::ROSmaster().kill();
