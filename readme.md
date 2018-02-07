@@ -14,3 +14,6 @@ A library to control ros nodes and launch files
   Recompile *ros_node_control_lib*
   * `make clean && make && sudo make install`
   Now the library is installed to /usr/local/include and /usr/local/lib. Example is installed to /usr/local/bin.
+
+3. Setup dynamic libaries
+  * `sudo ldconfig`

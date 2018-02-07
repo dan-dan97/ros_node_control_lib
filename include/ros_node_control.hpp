@@ -16,7 +16,7 @@ public:
     void waitKilling();
     void killChild(ROSNodeInfo rosNodeInfoArg);
 
-    static ROSNodeControl ROSmaster;
+    static ROSNodeControl& ROSmaster();
 
 private:
     ROSNodeInfo rosNodeInfo;

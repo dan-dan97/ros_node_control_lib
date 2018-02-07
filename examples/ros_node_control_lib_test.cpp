@@ -8,7 +8,7 @@ int main() {
 
     Keyboard keyboard;
 
-    ROSNodeControl::ROSmaster.run();
+    ROSNodeControl::ROSmaster().run();
     ROSNodeControl node(ROSNodeInfo::NodeType::LAUNCH, "usb_cam", "usb_cam-test.launch");
 
     while(!keyboard.keyPush(KEY_ESC)){
@@ -38,7 +38,7 @@ int main() {
         boost::this_thread::sleep(boost::posix_time::milliseconds(50));
     }
 
-    ROSNodeControl::ROSmaster.kill();
-    ROSNodeControl::ROSmaster.waitKilling();
+    ROSNodeControl::ROSmaster().kill();
+    ROSNodeControl::ROSmaster().waitKilling();
     return 0;
 }

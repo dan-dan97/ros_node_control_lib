@@ -1,7 +1,10 @@
 #include <ros_node_control.hpp>
 #include <cstdlib>
 
-ROSNodeControl ROSNodeControl::ROSmaster(ROSNodeInfo::NodeType::NODE, "roscore", "roscore");
+ROSNodeControl& ROSNodeControl::ROSmaster(){
+    static ROSNodeControl ROSmasterNode(ROSNodeInfo::NodeType::NODE, "roscore", "roscore");
+    return ROSmasterNode;
+}
 
 ROSNodeControl::ROSNodeControl(ROSNodeInfo rosNodeInfoArg)
 : rosNodeInfo(rosNodeInfoArg), nodeRunning(0)
